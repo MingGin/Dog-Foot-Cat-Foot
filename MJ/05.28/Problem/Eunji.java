@@ -14,26 +14,25 @@ public class ProblemSloving {
 		double student[] = new double[c];
 
 		for(int i = 0; i < c; i++) {
-				int n = sc.nextInt();
+				int n = sc.nextInt(); // 학생수
 			if(1 <= n && n <= 1000) {
-				int jumsu[] = new int[n];
-				for(int j = 0; j < n; j++) { //각 학생들 점수
-					temp = sc.nextInt();
-					if(0 <= temp && temp <= 100) {
-						jumsu[j] = temp;
-						sum += jumsu[j];
-						avg = sum / n; // 평균 넘는 학생수 / (학생수) * 100
-					}
-				}
-				avg = sum / n;
+				int jumsu[] = new int[n]; // 학생 1명의 n개의 점수 배열
 				for(int j = 0; j < n; j++) {
-					if(jumsu[j] > avg) {
-						cnt++;
+					temp = sc.nextInt(); //학생들의 각 점수
+					if(0 <= temp && temp <= 100) {// 학생들의 점수가 0이상 100이하의 정수
+						jumsu[j] = temp; //j번의 학생 점수
+						sum += jumsu[j]; // 학생 들의 점수
 					}
 				}
-				student[i] = 100*cnt/n;
+				avg = sum / n; // 학생들의 평균
+				for(int j = 0; j < n; j++) { //학생 수만큼 반복
+					if(jumsu[j] > avg) {
+						cnt++; // 평균이 넘는 학생수 카운
+					}
+				}
+				student[i] = 100*cnt/n; // 평균 넘는 학생수 / (학생수) * 100
 			}
-			temp = 0;
+			temp = 0;// 각각 수들의 초기화
 			sum = 0;
 			cnt = 0;
 		}
