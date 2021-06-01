@@ -1,5 +1,4 @@
 //Eunji 1차원 배열
-
 import java.util.*;
 
 public class ProblemSloving {
@@ -44,7 +43,6 @@ public class ProblemSloving {
 }
 
 //Eunji for문
-
 import java.util.*;
 
 public class ProblemSloving {
@@ -67,7 +65,6 @@ public class ProblemSloving {
 }
 
 //Eunji if문
-
 import java.util.*;
 
 public class ProblemSloving {
@@ -85,7 +82,6 @@ public class ProblemSloving {
 }
 
 //Eunji while문
-
 import java.util.*;
 
 public class ProblemSloving {
